@@ -31,6 +31,9 @@ const CustomNavbar = () => {
                         <li className="nav-item">
                             <Link href="/contact" className="nav-link" onClick={() => setExpanded(false)}>Contact</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link href="/blog" className="nav-link" onClick={() => setExpanded(false)}>Blog</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
