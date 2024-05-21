@@ -1,0 +1,48 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+main {
+  min-height: calc(100vh - 4rem);
+  padding-bottom: 4rem;
+  /* Space for the fixed footer */
+}
