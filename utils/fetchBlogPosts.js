@@ -3,7 +3,6 @@ import matter from 'gray-matter';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 export async function fetchBlogPosts() {
-    console.log('GitHub Token:', GITHUB_TOKEN); // Add this line to debug
     const url = 'https://api.github.com/repos/grantmacmillan/main-street-digital/contents/blogPosts';
 
     try {
@@ -22,7 +21,7 @@ export async function fetchBlogPosts() {
         }
 
         const files = await res.json();
-        console.log('Fetched files:', files); // Add this line to debug
+        // console.log('Fetched files:', files); // Add this line to debug
 
         const posts = await Promise.all(
             files.map(async (file) => {
@@ -40,8 +39,8 @@ export async function fetchBlogPosts() {
                 }
                 const content = await res.text();
                 const { data, content: postContent } = matter(content);
-                // console.log('Post content:', data, postContent); // Add this line to debug
-                return { slug: file.name.replace(/\.md$/, ''), title: data.title, date: data.date, content: postContent };
+                // console.log('Post content:', { data, postContent }); // Add this line to debug
+                return { slug: file.name.replace(/\.md$/, ''), title: data.title, date: data.date, description: data.description, tags: data.tags, content: postContent };
             })
         );
 

@@ -15,13 +15,18 @@ export async function generateMetadata({ params }) {
     return {
         title: post.title,
         description: post.description,
+        keywords: post.tags ? post.tags.join(', ') : '', // Handle undefined tags
         openGraph: {
             title: post.title,
             description: post.description,
             type: 'article',
             publishedTime: new Date(post.date).toISOString(),
-            url: `https://mainstreetdigital.com/blog/${post.slug}`,
-
+            url: `https://your-domain.com/blog/${post.slug}`,
+            images: [
+                {
+                    url: `https://your-domain.com/og-image/${post.slug}`, // Optional
+                },
+            ],
         },
     };
 }
@@ -38,6 +43,9 @@ export default async function BlogPostPage({ params }) {
         <div>
             <h1>{post.slug}</h1>
             <div dangerouslySetInnerHTML={{ __html: marked(post.content) }} />
+            <div>
+                <strong>Tags:</strong> {post.tags ? post.tags.join(', ') : 'No tags'}
+            </div>
         </div>
     );
 }
