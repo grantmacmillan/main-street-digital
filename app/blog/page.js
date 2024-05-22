@@ -1,4 +1,5 @@
 import { fetchBlogPosts } from '../../utils/fetchBlogPosts';
+import Link from 'next/link';
 
 export default async function BlogPage() {
     const posts = await fetchBlogPosts();
@@ -10,14 +11,14 @@ export default async function BlogPage() {
             <ul>
                 {posts.map((post) => (
                     <li key={post.slug}>
-                        <a href={`/blog/${post.slug}`}>
+                        <Link href={`/blog/${post.slug}`}>
                             <div>
                                 <h2>{post.title}</h2>
                                 <p>{new Date(post.date).toLocaleDateString()}</p>
                                 <p>{post.description}</p>
                                 <p><strong>Tags:</strong> {post.tags.join(', ')}</p>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
