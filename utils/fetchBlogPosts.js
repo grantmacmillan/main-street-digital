@@ -8,9 +8,10 @@ async function fetchFromGitHub(url) {
         headers: {
             'Accept': 'application/vnd.github+json',
             'Authorization': `Bearer ${GITHUB_TOKEN}`,
-            'Cache-Control': 'no-store', // Ensure no-store to prevent caching
+            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', // Ensure no-store to prevent caching
             'Pragma': 'no-cache',
-            'Expires': '0'
+            'Expires': '0',
+            'Surrogate-Control': 'no-store'
         }
     });
 
