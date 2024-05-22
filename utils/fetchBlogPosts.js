@@ -23,7 +23,8 @@ async function fetchFromGitHub(url) {
 }
 
 export async function fetchBlogPosts() {
-    const repoUrl = 'https://api.github.com/repos/grantmacmillan/main-street-digital/contents/blogPosts';
+    const timestamp = new Date().getTime(); // Add a timestamp to force refresh
+    const repoUrl = `https://api.github.com/repos/grantmacmillan/main-street-digital/contents/blogPosts?timestamp=${timestamp}`;
 
     try {
         const res = await fetchFromGitHub(repoUrl);
