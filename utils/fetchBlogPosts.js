@@ -12,6 +12,7 @@ export async function fetchBlogPosts() {
                 'Authorization': `Bearer ${GITHUB_TOKEN}`,
                 'Cache-Control': 'no-cache',
                 'Pragma': 'no-cache',
+                'X-GitHub-API-Version': '2022-11-28',
                 'Expires': '0'
             }
         });
@@ -31,6 +32,7 @@ export async function fetchBlogPosts() {
                         'Authorization': `Bearer ${GITHUB_TOKEN}`,
                         'Cache-Control': 'no-cache',
                         'Pragma': 'no-cache',
+                        'X-GitHub-API-Version': '2022-11-28',
                         'Expires': '0'
                     }
                 });
