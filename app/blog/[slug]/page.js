@@ -21,10 +21,10 @@ export async function generateMetadata({ params }) {
             description: post.description,
             type: 'article',
             publishedTime: new Date(post.date).toISOString(),
-            url: `https://your-domain.com/blog/${post.slug}`,
+            url: `https://mainstreetdigital.ca/blog/${post.slug}`,
             images: [
                 {
-                    url: `https://your-domain.com/og-image/${post.slug}`, // Optional
+                    url: `https://mainstreetdigital.ca/og-image/${post.slug}`, // Optional
                 },
             ],
         },

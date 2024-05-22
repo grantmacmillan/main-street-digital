@@ -21,7 +21,7 @@ export async function fetchBlogPosts() {
         }
 
         const files = await res.json();
-        // console.log('Fetched files:', files); // Add this line to debug
+        console.log('Fetched files:', files); // Debug log
 
         const posts = await Promise.all(
             files.map(async (file) => {
@@ -39,8 +39,8 @@ export async function fetchBlogPosts() {
                 }
                 const content = await res.text();
                 const { data, content: postContent } = matter(content);
-                // console.log('Post content:', { data, postContent }); // Add this line to debug
-                return { slug: file.name.replace(/\.md$/, ''), title: data.title, date: data.date, description: data.description, tags: data.tags, content: postContent };
+                console.log('Parsed content:', { data, postContent }); // Debug log
+                return { slug: file.name.replace(/\.md$/, ''), title: data.title, date: data.date, description: data.description, tags: data.tags || [], content: postContent };
             })
         );
 
