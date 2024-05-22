@@ -9,6 +9,8 @@ export async function fetchBlogPosts() {
         const res = await fetch(url, {
             method: 'GET',
             headers: {
+                'Accept': 'application/vnd.github+json',
+
                 'Authorization': `Bearer ${GITHUB_TOKEN}`,
                 'Cache-Control': 'no-cache',
                 'Pragma': 'no-cache',
@@ -29,6 +31,7 @@ export async function fetchBlogPosts() {
                 const res = await fetch(file.download_url, {
                     method: 'GET',
                     headers: {
+                        'Accept': 'application/vnd.github+json',
                         'Authorization': `Bearer ${GITHUB_TOKEN}`,
                         'Cache-Control': 'no-cache',
                         'Pragma': 'no-cache',
