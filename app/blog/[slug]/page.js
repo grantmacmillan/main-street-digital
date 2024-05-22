@@ -4,6 +4,7 @@ import { marked } from 'marked';
 export async function generateMetadata({ params }) {
     const posts = await fetchBlogPosts();
     const post = posts.find((post) => post.slug === params.slug);
+    console.log('Posts:', posts); // Log the posts to ensure they are fetched
 
     if (!post) {
         return {
