@@ -1,41 +1,11 @@
 import { fetchBlogPosts } from '../../../utils/fetchBlogPosts';
 import { marked } from 'marked';
 
-export async function generateMetadata({ params }) {
-    const posts = await fetchBlogPosts();
-    const post = posts.find((post) => post.slug === params.slug);
-    console.log('Posts:', posts); // Log the posts to ensure they are fetched
-
-    if (!post) {
-        return {
-            title: 'Post not found',
-            description: 'This post could not be found.',
-        };
-    }
-
-    return {
-        title: post.title,
-        description: post.description,
-        keywords: post.tags ? post.tags.join(', ') : '', // Handle undefined tags
-        openGraph: {
-            title: post.title,
-            description: post.description,
-            type: 'article',
-            publishedTime: new Date(post.date).toISOString(),
-            url: `https://mainstreetdigital.ca/blog/${post.slug}`,
-            images: [
-                {
-                    url: `https://mainstreetdigital.ca/og-image/${post.slug}`, // Optional
-                },
-            ],
-        },
-    };
-}
-
 export default async function BlogPostPage({ params }) {
     const { slug } = params;
     const posts = await fetchBlogPosts();
     const post = posts.find((post) => post.slug === slug);
+    console.log('Fetched post:', post); // Log the post to ensure it is fetched
 
     if (!post) {
         return <div>Post not found</div>;

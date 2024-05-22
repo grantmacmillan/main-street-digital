@@ -2,52 +2,52 @@ import matter from 'gray-matter';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
+async function fetchFromGitHub(url) {
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${GITHUB_TOKEN}`,
+            'Cache-Control': 'no-store', // Ensure no-store to prevent caching
+            'Pragma': 'no-cache',
+            'Expires': '0'
+        }
+    });
+
+    if (!response.ok) {
+        throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+    }
+
+    return response;
+}
+
 export async function fetchBlogPosts() {
-    console.log('fetchBlogPosts called'); // Add this line to confirm the function is called
-    const url = 'https://api.github.com/repos/grantmacmillan/main-street-digital/contents/blogPosts';
+    const repoUrl = 'https://api.github.com/repos/grantmacmillan/main-street-digital/contents/blogPosts';
 
     try {
-        const res = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/vnd.github+json',
-                'Authorization': `Bearer ${GITHUB_TOKEN}`,
-                'Cache-Control': 'no-store', // Ensure no-store to prevent caching
-                'Pragma': 'no-cache',
-                'Expires': '0'
-            }
-        });
-
-        if (!res.ok) {
-            throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
-        }
-
+        const res = await fetchFromGitHub(repoUrl);
         const files = await res.json();
         console.log('Fetched files:', files);
 
         const posts = await Promise.all(
             files.map(async (file) => {
                 try {
-                    const res = await fetch(file.download_url, {
-                        method: 'GET',
-                        headers: {
-                            'Accept': 'application/vnd.github+json',
-                            'Authorization': `Bearer ${GITHUB_TOKEN}`,
-                            'Cache-Control': 'no-store', // Ensure no-store to prevent caching
-                            'Pragma': 'no-cache',
-                            'Expires': '0'
-                        }
-                    });
-                    if (!res.ok) {
-                        throw new Error(`Failed to fetch: ${res.status} ${res.statusText}`);
-                    }
-                    const content = await res.text();
+                    const contentResponse = await fetchFromGitHub(file.download_url);
+                    const content = await contentResponse.text(); // Use text() instead of json()
                     console.log('Content of file:', file.name, content);
                     const { data, content: postContent } = matter(content);
                     console.log('Parsed content:', { data, postContent });
-                    return { slug: file.name.replace(/\.md$/, ''), title: data.title, date: data.date, description: data.description, tags: data.tags || [], content: postContent };
+
+                    return {
+                        slug: file.name.replace(/\.md$/, ''),
+                        title: data.title,
+                        date: data.date,
+                        description: data.description,
+                        tags: data.tags || [],
+                        content: postContent
+                    };
                 } catch (error) {
-                    console.error('Error fetching post content:', error, 'File:', file);
+                    console.error(`Error fetching content for file ${file.name}:`, error);
                     return null;
                 }
             })
