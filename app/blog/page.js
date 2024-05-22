@@ -3,7 +3,6 @@ import { fetchBlogPosts } from '../../utils/fetchBlogPosts';
 
 export default async function BlogPage() {
     const posts = await fetchBlogPosts();
-    console.log('Posts:', posts); // Add this line to debug
 
     return (
         <div>
@@ -15,6 +14,8 @@ export default async function BlogPage() {
                             <div>
                                 <h2>{post.title}</h2>
                                 <p>{new Date(post.date).toLocaleDateString()}</p>
+                                <p>{post.description}</p>
+                                <p><strong>Tags:</strong> {post.tags.join(', ')}</p>
                             </div>
                         </Link>
                     </li>
