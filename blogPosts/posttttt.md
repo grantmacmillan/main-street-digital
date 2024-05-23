@@ -1,5 +1,5 @@
 ---
-title: "dfgdfgdfg Blog Post"
+title: "UPDATED DATA Blog Post"
 description: "This is the description of the dfgfg blog post."
 date: "2024-05-21"
 tags: ["React", "JavaScript", "Programming"]
