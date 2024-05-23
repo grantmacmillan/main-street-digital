@@ -1,7 +1,7 @@
 ---
-title: "Second Blog Post"
+title: "Second Blog Post EDITED"
 description: "This is the description of the second blog post."
-date: "2024-05-21"
+date: "2024-05-25"
 tags: ["React", "JavaScript", "Programming"]
 ---
 
