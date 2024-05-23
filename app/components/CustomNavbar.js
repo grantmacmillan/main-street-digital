@@ -9,7 +9,7 @@ const CustomNavbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <a className="navbar-brand" href="/">Main Street Digital</a>
+                <a className="navbar-brand" href="/">Lamp Light Web Solutions</a>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -29,10 +29,13 @@ const CustomNavbar = () => {
                             <Link href="/portfolio" className="nav-link" onClick={() => setExpanded(false)}>Portfolio</Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/contact" className="nav-link" onClick={() => setExpanded(false)}>Contact</Link>
+                            <Link href="/our-services" className="nav-link" onClick={() => setExpanded(false)}>Services</Link>
                         </li>
                         <li className="nav-item">
                             <Link href="/blog" className="nav-link" onClick={() => setExpanded(false)}>Blog</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/contact" className="nav-link" onClick={() => setExpanded(false)}>Contact</Link>
                         </li>
                     </ul>
                 </div>
