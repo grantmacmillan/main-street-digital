@@ -5,7 +5,7 @@ export default async function BlogPostPage({ params }) {
     const { slug } = params;
     const posts = await fetchBlogPosts();
     const post = posts.find((post) => post.slug === slug);
-    console.log('Fetched post:', post); // Log the post to ensure it is fetched
+    //console.log('Fetched post:', post); // Log the post to ensure it is fetched
 
     if (!post) {
         return <div>Post not found</div>;

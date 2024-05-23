@@ -12,7 +12,9 @@ async function fetchFromGitHub(url) {
             'Pragma': 'no-cache',
             'Expires': '0',
             'Surrogate-Control': 'no-store'
-        }
+        },
+        cache: 'no-store'
+
     });
 
     if (!response.ok) {
@@ -29,16 +31,16 @@ export async function fetchBlogPosts() {
     try {
         const res = await fetchFromGitHub(repoUrl);
         const files = await res.json();
-        console.log('Fetched files:', files);
+        //console.log('Fetched files:', files);
 
         const posts = await Promise.all(
             files.map(async (file) => {
                 try {
                     const contentResponse = await fetchFromGitHub(file.download_url);
                     const content = await contentResponse.text(); // Use text() instead of json()
-                    console.log('Content of file:', file.name, content);
+                    //console.log('Content of file:', file.name, content);
                     const { data, content: postContent } = matter(content);
-                    console.log('Parsed content:', { data, postContent });
+                    //console.log('Parsed content:', { data, postContent });
 
                     return {
                         slug: file.name.replace(/\.md$/, ''),
@@ -49,7 +51,7 @@ export async function fetchBlogPosts() {
                         content: postContent
                     };
                 } catch (error) {
-                    console.error(`Error fetching content for file ${file.name}:`, error);
+                    //console.error(`Error fetching content for file ${file.name}:`, error);
                     return null;
                 }
             })
@@ -57,7 +59,7 @@ export async function fetchBlogPosts() {
 
         return posts.filter(post => post !== null);
     } catch (error) {
-        console.error('Error fetching blog posts:', error);
+        //console.error('Error fetching blog posts:', error);
         return [];
     }
 }
