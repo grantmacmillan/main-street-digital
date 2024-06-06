@@ -56,7 +56,7 @@ const CustomNavbar = () => {
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} href="/contact" passHref>
-                            <span className="btn-flip" data-back="Contact Me" data-front="Contact Me"></span>
+                            <span className="btn-flip" data-back="Contact Us" data-front="Contact Us"></span>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

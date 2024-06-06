@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram, FaQuoteRight } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaQuoteRight, FaChartLine, FaLaptopCode, FaMobileAlt } from 'react-icons/fa';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -10,22 +10,20 @@ import Testimonials from './components/Testimonials';
 
 
 export default function Home() {
-
   return (
     <>
       <div className="landing">
-        <Container className="h-100 d-flex flex-column align-items-center justify-content-center">
-          <Row className="w-100">
+        <Container className="d-flex flex-column align-items-center justify-content-center">
+          <Row className="w-100 align-items-center flex-grow-1">
             <Col md={6} className="text-content">
               <h1>
-                Transform Your <span className="highlight">Health</span>
+                <span className="highlight">Boost</span> Your Online Presence
               </h1>
               <p>
-                Achieve your <span className="highlight">fitness goals</span> with personalized training and expert support. Join us today for a healthier, stronger you.
+                We craft beautiful, effective websites for <span className="highlight">small businesses,</span> helping you connect with customers and grow your brand. Let’s make your digital vision a reality.
               </p>
-
               <Link href="/contact">
-                <span className="btn-flip" data-back="Contact Me" data-front="Get Started"></span>
+                <span className="btn-flip" data-back="Contact Us" data-front="Get Started"></span>
               </Link>
             </Col>
             <Col md={6} className="image-container d-flex justify-content-center align-items-center">
@@ -40,17 +38,24 @@ export default function Home() {
               </div>
             </Col>
           </Row>
-          <Row className="social-media-row w-100 mt-4">
-            <Col className="d-flex justify-content-center">
-              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                <FaInstagram size={40} className="icon-style" />
-              </a>
-              <a href="https://twitter.com" className="mx-3" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                <FaTwitter size={40} className="icon-style" />
-              </a>
-              <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                <FaFacebook size={40} className="icon-style" />
-              </a>
+          <Row className="services-row w-100 mt-4">
+            <Col md={4} className="d-flex flex-column align-items-center text-center">
+              <FaChartLine size={40} className="icon-style" />
+              <h3>SEO Optimization</h3>
+              <p>Improve your search engine ranking and get discovered by more potential customers.</p>
+              <Link href="/our-services">Learn More</Link>
+            </Col>
+            <Col md={4} className="d-flex flex-column align-items-center text-center">
+              <FaLaptopCode size={40} className="icon-style" />
+              <h3>Web Development</h3>
+              <p>We build responsive, high-quality websites tailored to your business needs.</p>
+              <Link href="/our-services">Learn More</Link>
+            </Col>
+            <Col md={4} className="d-flex flex-column align-items-center text-center">
+              <FaMobileAlt size={40} className="icon-style" />
+              <h3>Mobile Optimization</h3>
+              <p>Ensure your website looks great and works perfectly on all devices.</p>
+              <Link href="/our-services">Learn More</Link>
             </Col>
           </Row>
         </Container>
