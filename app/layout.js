@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Inter } from 'next/font/google';
+import { Overpass } from "next/font/google";
 import './globals.css';
 import CustomNavbar from './components/CustomNavbar';
 import CustomFooter from './components/CustomFooter';
@@ -7,7 +7,7 @@ import './buttons.css';
 import './navbar.css';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-const inter = Inter({ subsets: ['latin'] });
+const overpass = Overpass({ subsets: ["latin"] });
 
 export const metadata = {
   title: 'Lamp Light Web Solutions',
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={overpass.className}>
         <CustomNavbar />
         <main>{children}</main>
         <CustomFooter />
