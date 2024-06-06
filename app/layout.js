@@ -6,7 +6,7 @@ import CustomFooter from './components/CustomFooter';
 import './buttons.css';
 import './navbar.css';
 import './home.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
