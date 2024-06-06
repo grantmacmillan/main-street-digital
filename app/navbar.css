@@ -1,0 +1,64 @@
+.navbar-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+.navbar-container.scrolled {
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
+}
+
+.navbar-container.navbar-expanded {
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
+}
+
+.navbar-brand {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+.nav-link {
+    color: var(--text) !important;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    /* Add this line to remove underline */
+
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+
+}
+
+.nav-link.contact-link {
+    background-color: var(--primary-color);
+    color: black !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    /* Add this line to remove underline */
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.contact-link:hover {
+    background-color: darkorange;
+    color: var(--primary-color) !important;
+}

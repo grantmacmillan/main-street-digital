@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import CustomNavbar from './components/CustomNavbar';
+import CustomFooter from './components/CustomFooter';
+import './buttons.css';
+import './navbar.css';
+import './home.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,9 +20,7 @@ export default function RootLayout({ children }) {
       <body>
         <CustomNavbar />
         <main>{children}</main>
-        <footer>
-          <p>&copy; 2024 My Portfolio</p>
-        </footer>
+        <CustomFooter />
       </body>
     </html>
   );

@@ -1,51 +1,101 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+:root {
+  --primary-color: #ffae36;
+  /* Blue */
+  --secondary-color: #2ecc71;
+  /* Green */
+  --accent-color: #e74c3c;
+  /* Red */
+  --background-color: #f8f8f8;
+  /* Light Grey */
+  --text: #131313;
+  /* Dark Grey */
+
+
+  --font-size-h1: 2.5rem;
+  /* 40px */
+  --font-size-h2: 2rem;
+  /* 32px */
+  --font-size-h3: 1.75rem;
+  /* 28px */
+  --font-size-h4: 1.5rem;
+  /* 24px */
+  --font-size-h5: 1.25rem;
+  /* 20px */
+  --font-size-h6: 1rem;
+  /* 16px */
+  --font-size-p: 1rem;
+  /* 16px */
+}
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #d3d3d3;
+  background-color: var(--background-color);
+
+
 }
 
-header {
-  background: #333;
-  color: white;
-  padding: 1rem;
+h1 {
+  font-size: var(--font-size-h1);
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
+h2 {
+  font-size: var(--font-size-h2);
 }
 
-nav ul li {
-  margin: 0 1rem;
+h3 {
+  font-size: var(--font-size-h3);
+
 }
 
-/*
-a {
-  color: white;
-  text-decoration: none;
+h4 {
+  font-size: var(--font-size-h4);
 }
 
-a:hover {
-  text-decoration: underline;
-}
-*/
-
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+h5 {
+  font-size: var(--font-size-h5);
 }
 
-main {
-  min-height: calc(100vh - 4rem);
-  padding-bottom: 4rem;
-  /* Space for the fixed footer */
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+p {
+  font-size: var(--font-size-p);
+  color: var(--text);
+
+}
+
+li {
+  color: var(--text);
+  font-size: var(--font-size-p);
+
+
+}
+
+.icon-style {
+  color: var(--text);
+  /* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8)); */
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.icon-style:hover {
+  color: var(--primary-color);
+  /* Change to yellow */
+  transform: translateY(-5px);
+  /* Shift up slightly */
+}
+
+.section-heading {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.section-subheading {
+  color: var(--text);
+  opacity: 0.6;
+  font-weight: 200;
 }
