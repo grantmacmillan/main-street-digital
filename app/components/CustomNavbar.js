@@ -36,7 +36,7 @@ const CustomNavbar = () => {
         >
             <Container>
                 <Navbar.Brand as={Link} href="/" passHref>
-                    <span className="navbar-brand">Lamp Light</span>
+                    <span className="navbar-brand">Lamplight</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarNav" />
                 <Navbar.Collapse id="navbarNav">
