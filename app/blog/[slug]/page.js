@@ -6,7 +6,9 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 
 // Helper function to fetch post data and metadata
-async function getPostData(slug) {
+
+// Helper function to fetch post data and metadata
+export async function getPostData(slug) {
     const posts = await fetchBlogPosts();
     const post = posts.find((post) => post.slug === slug);
 
@@ -29,7 +31,6 @@ async function getPostData(slug) {
             description: post.description,
             type: 'article',
             url: `${BASE_URL}/blog/${post.slug}`,
-
         },
         twitter: {
             title: post.title,
@@ -51,7 +52,6 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPostPage({ params }) {
     const { post } = await getPostData(params.slug);
-    console.log('Fetched post:', post); // Log the post to ensure it is fetched
 
     if (!post) {
         return <div>Post not found</div>;

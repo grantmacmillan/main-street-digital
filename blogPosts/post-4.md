@@ -1,10 +1,16 @@
 ---
-title: "DD4 Blog Post"
-description: "This is the description of the DDDDDD blog post."
-date: "2024-05-21"
-tags: ["React", "JavaScript", "Programming"]
+title: "My 4th Blog Post"
+date: "2024-06-01"
+description: "This is a description of my 4th blog post."
+tags: ["blog", "post", "fourth"]
+thumbnail: "/images/blog/thumbnail-1.jpg"
+
 ---
 
-# Fourth Blog Post
+# My 4th Blog Post
 
-This is the content of the fourth blog post.
+Welcome to my 4th blog post!
+
+![An image from my post](/images/blog/thumbnail-1.jpg)
+
+Here is some more content...
