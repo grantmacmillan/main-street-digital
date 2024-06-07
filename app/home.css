@@ -113,6 +113,14 @@
     padding: 10px;
 }
 
+.carousel-indicators [data-bs-target] {
+    background-color: var(--text);
+}
+
+.carousel-indicators .active {
+    background-color: var(--text);
+}
+
 .custom-prev-icon,
 .custom-next-icon {
     color: var(--primary-color);

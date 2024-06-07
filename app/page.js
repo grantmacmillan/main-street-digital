@@ -44,21 +44,21 @@ export default function Home() {
               <FaChartLine size={40} className="icon-style" />
               <h3>SEO Optimization</h3>
               <p>Improve your search engine ranking and get discovered by more potential customers.</p>
-              <Link href="/our-services">Learn More</Link>
+              <Link href="/pricing">Learn More</Link>
               <div className="divider"></div>
             </Col>
             <Col md={4} className="d-flex flex-column align-items-center text-center position-relative mb-4">
               <FaLaptopCode size={40} className="icon-style" />
               <h3>Web Development</h3>
               <p>We build responsive, high-quality websites tailored to your business needs.</p>
-              <Link href="/our-services">Learn More</Link>
+              <Link href="/pricing">Learn More</Link>
               <div className="divider"></div>
             </Col>
             <Col md={4} className="d-flex flex-column align-items-center text-center mb-4">
               <FaMobileAlt size={40} className="icon-style" />
               <h3>Mobile Optimization</h3>
               <p>Ensure your website looks great and works perfectly on all devices.</p>
-              <Link href="/our-services">Learn More</Link>
+              <Link href="/pricing">Learn More</Link>
             </Col>
           </Row>
         </Container>

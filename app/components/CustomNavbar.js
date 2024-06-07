@@ -47,8 +47,8 @@ const CustomNavbar = () => {
                         <Nav.Link as={Link} href="/portfolio" passHref>
                             <span className={`nav-link ${pathname === '/portfolio' ? 'active' : ''}`} onClick={() => setExpanded(false)}>Portfolio</span>
                         </Nav.Link>
-                        <Nav.Link as={Link} href="/our-services" passHref>
-                            <span className={`nav-link ${pathname === '/our-services' ? 'active' : ''}`} onClick={() => setExpanded(false)}>Services</span>
+                        <Nav.Link as={Link} href="/pricing" passHref>
+                            <span className={`nav-link ${pathname === '/pricing' ? 'active' : ''}`} onClick={() => setExpanded(false)}>Pricing</span>
                         </Nav.Link>
                         <Nav.Link as={Link} href="/blog" passHref>
                             <span className={`nav-link ${pathname === '/blog' ? 'active' : ''}`} onClick={() => setExpanded(false)}>Blog</span>
