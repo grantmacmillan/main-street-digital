@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { FaMedal, FaStar, FaTrophy, FaCheck, FaArrowRight } from 'react-icons/fa';
 
@@ -8,13 +7,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from "../../public/images/landing.jpg";
 
-
 export default function Pricing() {
     return (
         <div className="container pricing-container my-5">
             <div className="row">
                 <div className="col-md-6 col-lg-4 mb-4">
-                    <div className="pricing-card text-start d-flex flex-column justify-content-between">
+                    <div className="pricing-card text-start d-flex flex-column justify-content-between delay-1">
                         <div className="pricing-card-body">
                             <p className="pricing-card-title-small">START</p>
                             <p className="pricing-card-title">Free</p>
@@ -27,7 +25,7 @@ export default function Pricing() {
                         </div>
                         <div className="pricing-card-footer">
                             <div className="footer-text text-start">
-                                Reccomended for businesses with more than 10 employees.
+                                Recommended for businesses with more than 10 employees.
                             </div>
                             <Link href="/contact" passHref className='no-underline'>
                                 <div className="cssbuttonsIoButton mt-2">
@@ -41,7 +39,7 @@ export default function Pricing() {
                     </div>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-4">
-                    <div className="pricing-card text-start d-flex flex-column justify-content-between">
+                    <div className="pricing-card text-start d-flex flex-column justify-content-between delay-2">
                         <div className="pricing-card-body">
                             <p className="pricing-card-title-small">PRO</p>
                             <h2 className="pricing-card-title">$38/mo</h2>
@@ -56,7 +54,7 @@ export default function Pricing() {
                         </div>
                         <div className="pricing-card-footer">
                             <div className="footer-text text-start">
-                                Reccomended for businesses with more than 10 employees.
+                                Recommended for businesses with more than 10 employees.
                             </div>
                             <Link href="/contact" passHref className='no-underline'>
                                 <div className="cssbuttonsIoButton mt-2">
@@ -70,7 +68,7 @@ export default function Pricing() {
                     </div>
                 </div>
                 <div className="col-md-6 col-lg-4 mb-4">
-                    <div className="pricing-card text-start d-flex flex-column justify-content-between">
+                    <div className="pricing-card text-start d-flex flex-column justify-content-between delay-3">
                         <div className="pricing-card-body">
                             <p className="pricing-card-title-small">ENTERPRISE</p>
                             <h2 className="pricing-card-title">$72/mo</h2>
@@ -80,11 +78,10 @@ export default function Pricing() {
                                 <li><FaCheck /> Tumeric plaid portland</li>
                                 <li><FaCheck /> Mixtape chillwave tumeric</li>
                             </ul>
-
                         </div>
                         <div className="pricing-card-footer">
                             <div className="footer-text text-start">
-                                Reccomended for businesses with more than 10 employees.
+                                Recommended for businesses with more than 10 employees.
                             </div>
                             <Link href="/contact" passHref className='no-underline'>
                                 <div className="cssbuttonsIoButton mt-2">

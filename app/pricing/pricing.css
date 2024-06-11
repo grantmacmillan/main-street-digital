@@ -7,6 +7,10 @@
     border: 1px solid var(--text);
     border-radius: 5px;
     height: 100%;
+
+    opacity: 0;
+    transform: scale(0);
+    animation: grow 0.5s ease-out forwards;
 }
 
 .pricing-card-body {
@@ -40,4 +44,33 @@
 .pricing-card-footer {
     padding: 1rem 2rem;
     color: #000;
+}
+
+
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Staggered animation delays for each card */
+.delay-1 {
+    animation-delay: 0s;
+}
+
+.delay-2 {
+    animation-delay: 1s;
+}
+
+.delay-3 {
+    animation-delay: 2s;
 }
