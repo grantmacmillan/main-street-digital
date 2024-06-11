@@ -7,6 +7,8 @@ import './buttons.css';
 import './navbar.css';
 import './home.css';
 import './blog/blog.css';
+import './portfolio/portfolio.css';
+import './pricing/pricing.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const overpass = Overpass({ subsets: ["latin"] });
 

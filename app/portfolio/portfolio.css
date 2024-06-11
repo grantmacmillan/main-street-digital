@@ -1,0 +1,50 @@
+.portfolio-container {
+    padding-top: 60px;
+
+}
+
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Adjust the height as needed */
+}
+
+.portfolio-image-container :global(img) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-caption {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    /* Light background for better readability */
+}
+
+.custom-caption h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.custom-caption p {
+    margin: 0;
+    font-size: 1rem;
+    color: #6c757d;
+    /* Optional: muted text color */
+}
+
+.carousel-indicators {
+    bottom: -30px;
+    /* Adjust the position as needed */
+}

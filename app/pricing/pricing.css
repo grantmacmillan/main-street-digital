@@ -1,0 +1,43 @@
+.pricing-container {
+    padding-top: 60px;
+}
+
+.pricing-card {
+    background-color: var(--background);
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    height: 100%;
+}
+
+.pricing-card-body {
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+.pricing-card-title {
+    font-size: 2rem;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+
+
+.btn-primary {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.pricing-card-title-small {
+    font-weight: 300;
+    margin-bottom: 2px;
+    color: var(--primary-color);
+}
+
+
+
+.pricing-card-footer {
+    padding: 1rem 2rem;
+    color: #000;
+}

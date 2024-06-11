@@ -7,7 +7,8 @@
   /* Blue */
   --secondary-color: #2ecc71;
   /* Green */
-  --accent-color: #e74c3c;
+  --accent-color: #17a2b8;
+  --accent-color-dark: #067897;
   /* Red */
   --background-color: #f8f8f8;
   /* Light Grey */
@@ -87,6 +88,14 @@ li {
   /* Change to yellow */
   transform: translateY(-5px);
   /* Shift up slightly */
+}
+
+.container-divider {
+  height: 2px;
+  width: 80%;
+  background: var(--primary);
+  background: linear-gradient(90deg, var(--background-color), var(--primary-color), var(--background-color));
+  margin: 15px auto;
 }
 
 .section-heading {
