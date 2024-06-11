@@ -10,12 +10,22 @@ const projects = [
     {
         name: 'Project One',
         date: 'January 2023',
-        image: '/images/basic-sc.png', // Ensure these paths are correct
+        image: '/images/portfolio/port-1.png', // Ensure these paths are correct
     },
     {
         name: 'Project Two',
         date: 'February 2023',
-        image: '/images/landing.jpg',
+        image: '/images/landing.jpg', // Ensure these paths are correct
+    },
+    {
+        name: 'Project One',
+        date: 'January 2023',
+        image: '/images/portfolio/testing.png', // Ensure these paths are correct
+    },
+    {
+        name: 'Project Two',
+        date: 'February 2023',
+        image: '/images/portfolio/port-1.png', // Ensure these paths are correct
     },
 ];
 

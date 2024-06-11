@@ -1,35 +1,59 @@
-// components/ProjectCarousel.js
 "use client";
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaInstagram, FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
-
+import Slider from 'react-slick';
 import Image from 'next/image';
 
 const ProjectCarousel = ({ projects }) => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3000, // Standard autoplay speed
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
     return (
-        <Carousel prevIcon={<FaChevronLeft className="custom-prev-icon" aria-hidden="true" />}
-            nextIcon={<FaChevronRight className="custom-next-icon" aria-hidden="true" />}>
-            {projects.map((project, index) => (
-                <Carousel.Item key={index}>
-                    <div className="carousel-content">
+        <div className="portfolio-carousel-container">
+            <Slider {...settings}>
+                {projects.map((project, index) => (
+                    <div key={index} className="portfolio-carousel-item">
                         <div className="portfolio-image-container">
                             <Image
                                 src={project.image}
                                 alt={project.name}
-                                width={800}
-                                height={450}
-                                className="d-block w-100"
+                                layout="fill"
+                                objectFit="cover"
+                                className="portfolio-carousel-image"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                quality={100}
                             />
                         </div>
-                        <div className="custom-caption">
-                            <h3>{project.name}</h3>
-                            <p>{project.date}</p>
-                        </div>
+                        <h5 className="portfolio-project-name">{project.name}</h5>
+                        <p className="portfolio-project-date">{project.date}</p>
                     </div>
-                </Carousel.Item>
-            ))}
-        </Carousel>
+                ))}
+            </Slider>
+
+        </div>
     );
 };
 
