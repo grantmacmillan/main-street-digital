@@ -121,9 +121,13 @@
     background-color: var(--text);
 }
 
+
+
 .custom-prev-icon,
 .custom-next-icon {
     color: var(--primary-color);
+
+    z-index: 1;
     /* Change to desired color */
     font-size: 2rem;
     /* Adjust the size as needed */
@@ -138,6 +142,16 @@
 .testimonial-star {
     color: var(--primary-color);
 }
+
+.testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Center the testimonial item */
+}
+
 
 
 .services-row .divider {

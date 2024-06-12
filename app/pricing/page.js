@@ -9,7 +9,9 @@ import profilePic from "../../public/images/landing.jpg";
 
 export default function Pricing() {
     return (
-        <div className="container pricing-container my-5">
+        <div className="container pricing-container my-5 text-center">
+            <h1 className="section-heading">Services</h1>
+            <h4 className="section-subheading">Find the package thats right for you!</h4>
             <div className="row">
                 <div className="col-md-6 col-lg-4 mb-4">
                     <div className="pricing-card text-start d-flex flex-column justify-content-between delay-1">

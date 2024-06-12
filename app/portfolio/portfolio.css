@@ -1,4 +1,8 @@
 /* styles/globals.css */
+.portfolio-container {
+    padding-top: 60px;
+}
+
 .portfolio-carousel-container {
     margin: 0 auto;
     padding: 20px;
