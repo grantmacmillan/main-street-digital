@@ -35,24 +35,25 @@ const ProjectCarousel = ({ projects }) => {
         <div className="portfolio-carousel-container">
             <Slider {...settings}>
                 {projects.map((project, index) => (
-                    <div key={index} className="portfolio-carousel-item">
-                        <div className="portfolio-image-container">
-                            <Image
-                                src={project.image}
-                                alt={project.name}
-                                layout="fill"
-                                objectFit="cover"
-                                className="portfolio-carousel-image"
-                                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                quality={100}
-                            />
+                    <div key={index} className="portfolio-carousel-item-wrapper">
+                        <div className="portfolio-carousel-item">
+                            <div className="portfolio-image-container">
+                                <Image
+                                    src={project.image}
+                                    alt={project.name}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="portfolio-carousel-image"
+                                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    quality={100}
+                                />
+                            </div>
+                            <h5 className="portfolio-project-name">{project.name}</h5>
+                            <p className="portfolio-project-date">{project.date}</p>
                         </div>
-                        <h5 className="portfolio-project-name">{project.name}</h5>
-                        <p className="portfolio-project-date">{project.date}</p>
                     </div>
                 ))}
             </Slider>
-
         </div>
     );
 };

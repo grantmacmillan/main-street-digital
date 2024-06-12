@@ -12,6 +12,7 @@
   /* Red */
   --background-color: #f8f8f8;
   /* Light Grey */
+  --container-color: #F5F5F5;
   --text: #131313;
   /* Dark Grey */
 
@@ -34,7 +35,7 @@
 
 body {
   margin: 0;
-  background-color: var(--background-color);
+  background-color: var(--background-color) !important;
 
 
 }

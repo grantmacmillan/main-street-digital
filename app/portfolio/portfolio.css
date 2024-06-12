@@ -9,14 +9,20 @@
     overflow: hidden;
 }
 
+.portfolio-carousel-item-wrapper {
+    padding: 20px 10px;
+    /* Add horizontal padding to create spacing between items */
+    box-sizing: border-box;
+}
+
 .portfolio-carousel-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: var(--container-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
     width: 100%;
     /* Ensure items take full width */
     box-sizing: border-box;
