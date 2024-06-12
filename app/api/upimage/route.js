@@ -15,11 +15,7 @@ const transporter = nodemailer.createTransport({
 
 console.log('Sending email as:', process.env.GMAIL_USER);
 
-export const config = {
-    api: {
-        bodyParser: false, // Disable body parsing, so formidable can handle it
-    },
-};
+
 
 const pathDist = path.join(process.cwd(), '/public/images');
 
