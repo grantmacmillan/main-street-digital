@@ -20,7 +20,7 @@ const CustomFooter = () => {
                     </div>
                     <div className="col-md-4 text-center">
                         <h5>Contact Information</h5>
-                        <p>Email: grant.macmillan94@gmail.com</p>
+                        <p>Email: info@lamplightweb.ca</p>
                         <p>Phone: (647) 456-9232</p>
                         <p>Location: Stouffville, Ontario</p>
                     </div>
