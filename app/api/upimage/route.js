@@ -1,5 +1,3 @@
-// app/api/upimage/route.js
-
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import fs from 'fs';
@@ -25,6 +23,8 @@ export async function POST(req) {
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
+
+        console.log('Received form data:', { name, email, message, file });
 
         if (!file) {
             throw new Error('File not provided');
@@ -52,6 +52,8 @@ export async function POST(req) {
             ],
         };
 
+        console.log('Mail options:', mailOptions);
+
         await transporter.sendMail(mailOptions);
         console.log('Email sent successfully');
 
@@ -61,7 +63,7 @@ export async function POST(req) {
 
         return NextResponse.json({ message: 'Submission successful' });
     } catch (error) {
-        console.error('Error processing submission:', error); // Log the error to the console
-        return NextResponse.json({ error: 'Error sending email' }, { status: 500 });
+        console.error('Error processing submission:', error.message); // Log the error to the console
+        return NextResponse.json({ error: 'Error sending email: ' + error.message }, { status: 500 });
     }
 }
