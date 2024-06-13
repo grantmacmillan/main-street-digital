@@ -14,6 +14,7 @@ const transporter = nodemailer.createTransport({
 console.log('Sending email as:', process.env.GMAIL_USER);
 
 const pathDist = '/tmp'; // Use /tmp for temporary file storage in serverless environments
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB in bytes
 
 export async function POST(req) {
     try {
@@ -28,6 +29,10 @@ export async function POST(req) {
 
         if (!file) {
             throw new Error('File not provided');
+        }
+
+        if (file.size > MAX_FILE_SIZE) {
+            throw new Error('File size exceeds the 10MB limit');
         }
 
         const saveTo = path.join(pathDist, file.name);
