@@ -10,14 +10,15 @@ import profilePic from "../../public/images/landing.jpg";
 export default function Pricing() {
     return (
         <div className="container pricing-container my-5 text-center">
-            <h1 className="section-heading">Services</h1>
+            <h1 className="section-heading">Pricing</h1>
             <h4 className="section-subheading">Find the package thats right for you!</h4>
+            <p>All prices in CAD.</p>
             <div className="row">
                 <div className="col-md-6 col-lg-4 mb-4">
                     <div className="pricing-card text-start d-flex flex-column justify-content-between delay-1">
                         <div className="pricing-card-body">
-                            <p className="pricing-card-title-small">START</p>
-                            <p className="pricing-card-title">Free</p>
+                            <p className="pricing-card-title-small">PERSONAL</p>
+                            <p className="pricing-card-title">$500</p>
                             <div className='container-divider'></div>
                             <ul className="list-unstyled mt-3 mb-4">
                                 <li><FaCheck /> Vexillologist pitchfork</li>
@@ -27,7 +28,7 @@ export default function Pricing() {
                         </div>
                         <div className="pricing-card-footer">
                             <div className="footer-text text-start">
-                                Recommended for businesses with more than 10 employees.
+                                A site all about you. Great for artists, blogs, and personal resumes.
                             </div>
                             <Link href="/contact" passHref className='no-underline'>
                                 <div className="cssbuttonsIoButton mt-2">
