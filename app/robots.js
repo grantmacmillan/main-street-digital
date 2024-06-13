@@ -7,6 +7,6 @@ export default function robots() {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: '${baseUrl}/sitemap.xml',
+        sitemap: `${baseUrl}/sitemap.js`,
     }
 }
