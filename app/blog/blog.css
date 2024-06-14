@@ -5,6 +5,7 @@
 .blog-container {
     padding-top: 60px;
 
+
 }
 
 /* BlogPostPage.css */
@@ -12,7 +13,6 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: Arial, sans-serif;
 }
 
 .blog-title {

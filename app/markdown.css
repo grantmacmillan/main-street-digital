@@ -1,53 +1,90 @@
 /* markdown.css */
-
 .markdown-body {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: 'Georgia', serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text);
+}
+
+.markdown-body .intro-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.markdown-body .intro-section img {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    max-width: 50%;
+    height: auto;
+}
+
+.markdown-body .intro-section div {
+    flex: 1 1 auto;
 }
 
 .markdown-body img.thumbnail {
     float: left;
     margin: 0 20px 20px 0;
     max-width: 50%;
+    width: 100%;
     height: auto;
 }
 
-.markdown-body img.large {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-}
-
-.markdown-body img.center {
-    display: block;
-    margin: 20px auto;
-    max-width: 75%;
-    height: auto;
-}
-
+.markdown-body img.large,
+.markdown-body img.center,
 .markdown-body img.border {
-    border: 2px solid #ddd;
-    padding: 5px;
-    margin: 20px 0;
+    display: block;
+    margin: 20px auto;
     max-width: 100%;
     height: auto;
 }
 
-.markdown-body h1,
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+
+    .markdown-body img.thumbnail,
+    .markdown-body img.large,
+    .markdown-body img.border {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* Ensure text wrapping around images is properly handled on small screens */
+    .markdown-body img.thumbnail {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .markdown-body .intro-section {
+        flex-direction: column;
+    }
+
+    .markdown-body .intro-section img {
+        margin: 10px 0;
+        max-width: 100%;
+    }
+}
+
+.markdown-body h1 {
+    margin-top: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
 .markdown-body h2,
 .markdown-body h3,
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-    margin-top: 2rem;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.2;
-    color: red;
+    color: var(--primary-color);
 }
 
 .markdown-body p {
@@ -66,9 +103,8 @@
 .markdown-body blockquote {
     margin: 1.5rem 0;
     padding: 0.5rem 1rem;
-    border-left: 4px solid #ddd;
-    background-color: #f9f9f9;
-    color: #555;
+    border-left: 4px solid var(--primary-color);
+    color: var(--text);
 }
 
 .markdown-body ul,
@@ -78,14 +114,15 @@
 }
 
 .markdown-body code {
-    background-color: #f5f5f5;
+    background-color: var(--text);
+    color: var(--background-color);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
-    font-family: 'Courier New', monospace;
+    /* font-family: 'Courier New', monospace; */
 }
 
 .markdown-body pre {
-    background-color: #f5f5f5;
+    background-color: var(--background-color);
     padding: 1rem;
     border-radius: 4px;
     overflow: auto;

@@ -8,11 +8,13 @@ thumbnail: "/images/blog/thumbnail-1.jpg"
 
 # Starting a Web Development Agency in 2024
 
-<img src="/images/blog/thumbnail-1.jpg" class="thumbnail" alt="An image from my post">
-
-## Introduction
-
-Starting a web development agency can be a lucrative and fulfilling venture, especially in 2024, when the demand for web services is at an all-time high. In this guide, we'll cover the essential steps and considerations to help you launch a successful web development agency.
+<div class="intro-section">
+  <img src="/images/blog/thumbnail-1.jpg" class="thumbnail" alt="An image from my post">
+  <div>
+    <h2>Introduction</h2>
+    <p>Starting a web development agency can be a lucrative and fulfilling venture, especially in 2024, when the demand for web services is at an all-time high. In this guide, we'll cover the essential steps and considerations to help you launch a successful web development agency.</p>
+  </div>
+</div>
 
 ## Market Research
 
