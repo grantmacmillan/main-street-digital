@@ -67,3 +67,10 @@ export default async function BlogPostPage({ params }) {
         </div>
     );
 }
+
+export async function generateStaticParams() {
+    const posts = await fetchBlogPosts();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
+}
