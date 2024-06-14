@@ -58,11 +58,12 @@ export default async function BlogPostPage({ params }) {
     }
 
     return (
-        <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: marked(post.content) }} />
-            <div>
-                <strong>Tags:</strong> {post.tags.join(', ')}
+        <div className='blog-container mt-5 markdown-body'>
+            <div className='blog-content' dangerouslySetInnerHTML={{ __html: marked(post.content) }} />
+            <div className='blog-tags'>
+                <strong>Tags:</strong> {post.tags.map(tag => (
+                    <span key={tag}>{tag}</span>
+                ))}
             </div>
         </div>
     );

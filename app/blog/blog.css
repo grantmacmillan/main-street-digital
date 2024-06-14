@@ -2,6 +2,46 @@
     padding-top: 60px;
 }
 
+.blog-container {
+    padding-top: 60px;
+
+}
+
+/* BlogPostPage.css */
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.blog-content {
+    line-height: 1.6;
+    color: #444;
+}
+
+.blog-tags {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.blog-tags strong {
+    font-weight: bold;
+    color: #555;
+}
+
+.blog-tags span {
+    color: #0070f3;
+    margin-right: 0.5rem;
+}
+
 .header {
     margin-bottom: 20px;
     border-bottom: 2px solid var(--primary-color);

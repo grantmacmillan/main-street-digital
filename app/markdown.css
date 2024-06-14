@@ -1,0 +1,92 @@
+/* markdown.css */
+
+.markdown-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.markdown-body img.thumbnail {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 50%;
+    height: auto;
+}
+
+.markdown-body img.large {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.markdown-body img.center {
+    display: block;
+    margin: 20px auto;
+    max-width: 75%;
+    height: auto;
+}
+
+.markdown-body img.border {
+    border: 2px solid #ddd;
+    padding: 5px;
+    margin: 20px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    margin-top: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: red;
+}
+
+.markdown-body p {
+    margin: 1.5rem 0;
+}
+
+.markdown-body a {
+    color: #0070f3;
+    text-decoration: none;
+}
+
+.markdown-body a:hover {
+    text-decoration: underline;
+}
+
+.markdown-body blockquote {
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem;
+    border-left: 4px solid #ddd;
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.markdown-body code {
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.markdown-body pre {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow: auto;
+}

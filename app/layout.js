@@ -9,6 +9,7 @@ import './home.css';
 import './blog/blog.css';
 import './portfolio/portfolio.css';
 import './pricing/pricing.css';
+import './markdown.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
